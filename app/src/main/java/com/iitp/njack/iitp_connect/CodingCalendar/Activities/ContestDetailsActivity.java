@@ -31,7 +31,6 @@ public class ContestDetailsActivity extends AppCompatActivity {
     TextView contestTitle;
     TextView contestDescription;
     TextView contestStartTime;
-    TextView contestDuration;
     Button contestLink;
 
     @Override
@@ -43,7 +42,6 @@ public class ContestDetailsActivity extends AppCompatActivity {
         contestTitle = (TextView) findViewById(R.id.tv_contest_details_title);
         contestDescription = (TextView) findViewById(R.id.tv_contest_details_description);
         contestStartTime = (TextView) findViewById(R.id.tv_contest_details_start_time);
-        contestDuration = (TextView) findViewById(R.id.tv_contest_details_duration);
         contestLink = (Button) findViewById(R.id.button_contest_details_button);
 
         mContest = getIntent().getParcelableExtra(CodingCalendarHomeActivity.INTENT_EXTRA);
@@ -57,10 +55,8 @@ public class ContestDetailsActivity extends AppCompatActivity {
         contestCoverImageView.setImageResource(getCoverImage(mContest.getUrl()));
 
         SpannableString contestDetailsStartTime = DatabaseUtilities.getStartTimeTextDetailsFragment(mContest.getStartTime());
-        contestStartTime.setText(contestDetailsStartTime);
         String duration = getString(R.string.duration_approximately)+" "+getContestDuration(mContest.getStartTime(),mContest.getEndTime())+" "+getString(R.string.hours);
-        contestDuration.setText(duration);
-
+        contestStartTime.setText(contestDetailsStartTime+"\n"+duration);
 
         contestLink.setOnClickListener(new View.OnClickListener() {
             @Override

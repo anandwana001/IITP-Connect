@@ -15,4 +15,7 @@
     <string name="contest_description">Contest Description:</string>
     <string name="total_classes">Total Classes :</string>
     <string name="classes_present">Classes Present :</string>
+    <string name="interested">Interested</string>
+    <string name="share">Share</string>
+    <string name="more">More</string>
 </resources>
