@@ -56,7 +56,8 @@ public class ContestDetailsActivity extends AppCompatActivity {
 
         SpannableString contestDetailsStartTime = DatabaseUtilities.getStartTimeTextDetailsFragment(mContest.getStartTime());
         String duration = getString(R.string.duration_approximately)+" "+getContestDuration(mContest.getStartTime(),mContest.getEndTime())+" "+getString(R.string.hours);
-        contestStartTime.setText(contestDetailsStartTime+"\n"+duration);
+        String date = contestDetailsStartTime+"\n"+duration;
+        contestStartTime.setText(date);
 
         contestLink.setOnClickListener(new View.OnClickListener() {
             @Override
