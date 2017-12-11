@@ -18,4 +18,10 @@
     <string name="interested">Interested</string>
     <string name="share">Share</string>
     <string name="more">More</string>
+    <string name="codechef">CODECHEF</string>
+    <string name="codeforces">CODEFORCES</string>
+    <string name="hackerrank">HACKERRANK</string>
+    <string name="topcoder">TOPCODER</string>
+    <string name="urioj">URIOJ</string>
+    <string name="hackerearth">HACKEREARTH</string>
 </resources>
